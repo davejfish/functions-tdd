@@ -9,6 +9,7 @@ import {
     rockSiscorsPaper,
     firstLastMiddle,
     makeArray,
+    totalOfNumbers,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -259,6 +260,20 @@ test('check array', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...i loop
 */
+
+test('total sum of all numbers up to 4', (expect) => {
+    const num = 4;
+    const expected = 10;
+    const actual = totalOfNumbers(num);
+    expect.equal(actual, expected);
+});
+
+test('total sum of all numbers up to 10', (expect) => {
+    const num = 10;
+    const expected = 55;
+    const actual = totalOfNumbers(num);
+    expect.equal(actual, expected);
+});
 
 /*
     Write a function that takes name of three pets
