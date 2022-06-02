@@ -22,3 +22,13 @@ export function lessThanHundred(num1, num2) {
         return false;
     }
 }
+
+export function evenOrOdd(num1) {
+    const sum = num1 % 2;
+    
+    if (sum === 0) {
+        return 'even';
+    } else {
+        return 'odd';
+    }
+}

@@ -5,6 +5,7 @@ import {
     minutesToSeconds,
     triangleArea,
     lessThanHundred,
+    evenOrOdd,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -121,6 +122,15 @@ test('check if total is less than 100', (expect) => {
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
+
+test('check for even or odd num', (expect) => {
+    const num1 = 11;
+    const expected = 'odd';
+
+    const actual = evenOrOdd(num1);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
