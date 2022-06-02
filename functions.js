@@ -87,3 +87,13 @@ export function numberOfCats(arr) {
     }
     return result;
 }
+
+export function numberOfAnimal(arr, animal) {
+    let result = 0;
+    for (let i of arr) {
+        if (i === animal) {
+            result += 1;
+        }
+    }
+    return `${result} ${animal}'s`;
+}

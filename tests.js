@@ -12,6 +12,7 @@ import {
     totalOfNumbers,
     petNameArray,
     numberOfCats,
+    numberOfAnimal,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -327,6 +328,22 @@ test('count the number of cats again!', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...of loop, if control flow
 */
+
+test('count the total number of an animal (gorilla) in an array', (expect) => {
+    const arr = ['gorilla', 'fox', 'cat', 'mouse', 'gorilla', 'fox', 'fox', 'dog'];
+    const animal = 'gorilla';
+    const expected = '2 gorilla\'s';
+    const actual = numberOfAnimal(arr, animal);
+    expect.equal(actual, expected);
+});
+
+test('count the total number of an animal (fox) in an array', (expect) => {
+    const arr = ['gorilla', 'fox', 'cat', 'mouse', 'gorilla', 'fox', 'fox', 'dog'];
+    const animal = 'fox';
+    const expected = '3 fox\'s';
+    const actual = numberOfAnimal(arr, animal);
+    expect.equal(actual, expected);
+});
 
 /*
     Write a function takes in a month as input (represented as a 
