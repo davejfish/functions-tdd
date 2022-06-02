@@ -10,6 +10,7 @@ import {
     firstLastMiddle,
     makeArray,
     totalOfNumbers,
+    petNameArray,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -283,6 +284,15 @@ test('total sum of all numbers up to 10', (expect) => {
 
     Uses: array literal syntax, deepEqual assertion 
 */
+
+test('make an array from 3 pet names', (expect) => {
+    const pet1 = 'doug';
+    const pet2 = 'bill';
+    const pet3 = 'ted';
+    const expected = ['doug', 'bill', 'ted'];
+    const actual = petNameArray(pet1, pet2, pet3);
+    expect.deepEqual(actual, expected);
+});
 
 /*
     Write a function that takes an array of pet types ('cat', 'dog', 'bird')

@@ -69,3 +69,11 @@ export function totalOfNumbers(num) {
     }
     return result;
 }
+
+export function petNameArray(pet1, pet2, pet3) {
+    let arr = [];
+    arr.push(pet1);
+    arr.push(pet2);
+    arr.push(pet3);
+    return arr;
+}
