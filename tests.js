@@ -4,6 +4,7 @@ import {
     subtract,
     minutesToSeconds,
     triangleArea,
+    lessThanHundred,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -100,6 +101,16 @@ test('find area of triangle', (expect) => {
 
     Uses: Comparison operator(s), if/else control flow
 */
+
+test('check if total is less than 100', (expect) => {
+    const num1 = 40;
+    const num2 = 80;
+    const expected = false;
+
+    const actual = lessThanHundred(num1, num2);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and
