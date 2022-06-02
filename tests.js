@@ -8,6 +8,7 @@ import {
     evenOrOdd,
     rockSiscorsPaper,
     firstLastMiddle,
+    makeArray,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -147,7 +148,7 @@ test('check for even number', (expect) => {
     const expected = 'even';
     const actual = evenOrOdd(num1);
     expect.equal(actual, expected);
-})
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
@@ -230,6 +231,25 @@ test('testing for no middle name', (expect) => {
 
     Uses: object literal syntax, deepEqual assertion
 */
+
+test('check array', (expect) => {
+    const name = 'DK';
+    const type = 'gorilla';
+    const age = 'unknown';
+    const food = 'bananas';
+    const toys = ['tire swing', 'tires', 'barrels'];
+
+    const expected = {
+        name: 'DK',
+        type: 'gorilla',
+        age: 'unknown',
+        food: 'bananas',
+        toys: ['tire swing', 'tires', 'barrels']
+    };
+    
+    const actual = makeArray(name, type, age, food, toys);
+    expect.deepEqual(actual, expected);
+});
 
 /*
     Write a function that takes a number

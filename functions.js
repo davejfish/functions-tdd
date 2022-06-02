@@ -50,3 +50,14 @@ export function firstLastMiddle(first, last, middle) {
         return `${first} ${middle} ${last}`;
     }
 }
+
+export function makeArray(name, type, age, food, toys) {
+    let arr = {};
+    arr.name = name;
+    arr.type = type;
+    arr.age = age;
+    arr.food = food;
+    arr.toys = toys;
+
+    return arr;
+}
