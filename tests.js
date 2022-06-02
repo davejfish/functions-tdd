@@ -6,6 +6,7 @@ import {
     triangleArea,
     lessThanHundred,
     evenOrOdd,
+    rockSiscorsPaper,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -146,6 +147,26 @@ test('check for even or odd num', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+
+test('RPS check for player 1 win', (expect) => {
+    let p1 = 'rock';
+    let p2 = 'scissors';
+    let expected = 'player 1 wins';
+    let actual = rockSiscorsPaper(p1, p2);
+    expect.equal(actual, expected);
+
+    p1 = 'rock';
+    p2 = 'paper';
+    expected = 'player 2 wins';
+    actual = rockSiscorsPaper(p1, p2);
+    expect.equal(actual, expected);
+
+    p1 = 'rock';
+    p2 = 'rock';
+    expected = 'draw';
+    actual = rockSiscorsPaper(p1, p2);
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in a first, last, and a third optional

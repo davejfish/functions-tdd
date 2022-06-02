@@ -32,3 +32,13 @@ export function evenOrOdd(num1) {
         return 'odd';
     }
 }
+
+export function rockSiscorsPaper(p1, p2) {
+    if ((p1 === 'rock') && (p2 === 'scissors')) {
+        return 'player 1 wins';
+    } else if ((p1 === 'rock') && (p2 === 'paper')) {
+        return 'player 2 wins';
+    } else {
+        return 'draw';
+    }
+}
