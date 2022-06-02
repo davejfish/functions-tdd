@@ -2,6 +2,7 @@
 import {
     add,
     subtract,
+    minutesToSeconds,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -58,6 +59,16 @@ test('subtracts two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('converts minutes to seconds', (expect) => {
+    const minutes = 20;
+    const expected = 1200;
+
+    const actual = minutesToSeconds(minutes);
+
+    expect.equal(actual, expected);
+});
+
 
 /* 
     Write a function that takes in the base and height
