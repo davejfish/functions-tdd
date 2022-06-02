@@ -13,6 +13,7 @@ import {
     petNameArray,
     numberOfCats,
     numberOfAnimal,
+    numberOfDays,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -364,3 +365,17 @@ test('count the total number of an animal (fox) in an array', (expect) => {
     number of days for Feb. The default value for the year should be
     the current year
 */
+
+test('number of days in a month (june)', (expect) => {
+    const month = 6;
+    const expected = 30;
+    const actual = numberOfDays(month);
+    expect.equal(actual, expected);
+});
+
+test('number of days in a month (february', (expect) => {
+    const month = 2;
+    const expected = 28;
+    const actual = numberOfDays(month);
+    expect.equal(actual, expected);
+});

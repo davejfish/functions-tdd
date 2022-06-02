@@ -97,3 +97,9 @@ export function numberOfAnimal(arr, animal) {
     }
     return `${result} ${animal}'s`;
 }
+
+export function numberOfDays(month) {
+    var days = new Date();
+    let year = days.getFullYear();
+    return new Date(year, month, 0).getDate();
+}
