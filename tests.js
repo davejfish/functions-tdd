@@ -3,6 +3,7 @@ import {
     add,
     subtract,
     minutesToSeconds,
+    triangleArea,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -69,7 +70,6 @@ test('converts minutes to seconds', (expect) => {
     expect.equal(actual, expected);
 });
 
-
 /* 
     Write a function that takes in the base and height
     of a triangle and returns its area (google it)
@@ -78,6 +78,16 @@ test('converts minutes to seconds', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('find area of triangle', (expect) => {
+    const base = 15;
+    const height = 20;
+    const expected = 150;
+
+    const actual = triangleArea(base, height);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in two 2 numbers
