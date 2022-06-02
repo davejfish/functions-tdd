@@ -77,3 +77,13 @@ export function petNameArray(pet1, pet2, pet3) {
     arr.push(pet3);
     return arr;
 }
+
+export function numberOfCats(arr) {
+    let result = 0;
+    for (let i of arr) {
+        if (i === 'cat') {
+            result += 1;
+        }
+    }
+    return result;
+}

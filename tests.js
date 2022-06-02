@@ -11,6 +11,7 @@ import {
     makeArray,
     totalOfNumbers,
     petNameArray,
+    numberOfCats,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -302,6 +303,20 @@ test('make an array from 3 pet names', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...of loop
 */
+
+test('count the number of cats', (expect) => {
+    const arr = ['cat', 'cat', 'donkey', 'gorilla', 'cat'];
+    const expected = 3;
+    const actual = numberOfCats(arr);
+    expect.equal(actual, expected);
+});
+
+test('count the number of cats again!', (expect) => {
+    const arr = ['gorilla', 'not a cat', 'still not a cat', 'human'];
+    const expected = 0;
+    const actual = numberOfCats(arr);
+    expect.equal(actual, expected);
+});
 
 /*
     BONUS: Write a function that takes an array of pet types ('cat', 'dog', 'bird')
