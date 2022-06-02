@@ -42,3 +42,11 @@ export function rockSiscorsPaper(p1, p2) {
         return 'draw';
     }
 }
+
+export function firstLastMiddle(first, last, middle) {
+    if (middle === undefined) {
+        return `${first} ${last}`;
+    } else {
+        return `${first} ${middle} ${last}`;
+    }
+}

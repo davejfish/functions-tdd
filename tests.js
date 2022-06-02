@@ -7,6 +7,7 @@ import {
     lessThanHundred,
     evenOrOdd,
     rockSiscorsPaper,
+    firstLastMiddle,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -104,13 +105,21 @@ test('find area of triangle', (expect) => {
     Uses: Comparison operator(s), if/else control flow
 */
 
-test('check if total is less than 100', (expect) => {
+test('check if total is more than 100', (expect) => {
     const num1 = 40;
     const num2 = 80;
     const expected = false;
 
     const actual = lessThanHundred(num1, num2);
 
+    expect.equal(actual, expected);
+});
+
+test('check if total is less than 100', (expect) => {
+    const num1 = 50;
+    const num2 = 30;
+    const expected = true;
+    const actual = lessThanHundred(num1, num2);
     expect.equal(actual, expected);
 });
 
@@ -124,7 +133,7 @@ test('check if total is less than 100', (expect) => {
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
 
-test('check for even or odd num', (expect) => {
+test('check for odd num', (expect) => {
     const num1 = 11;
     const expected = 'odd';
 
@@ -132,6 +141,13 @@ test('check for even or odd num', (expect) => {
 
     expect.equal(actual, expected);
 });
+
+test('check for even number', (expect) => {
+    const num1 = 10;
+    const expected = 'even';
+    const actual = evenOrOdd(num1);
+    expect.equal(actual, expected);
+})
 
 /* 
     Write a function that takes two rock-paper-scissors throws
@@ -149,22 +165,26 @@ test('check for even or odd num', (expect) => {
 */
 
 test('RPS check for player 1 win', (expect) => {
-    let p1 = 'rock';
-    let p2 = 'scissors';
-    let expected = 'player 1 wins';
-    let actual = rockSiscorsPaper(p1, p2);
+    const p1 = 'rock';
+    const p2 = 'scissors';
+    const expected = 'player 1 wins';
+    const actual = rockSiscorsPaper(p1, p2);
     expect.equal(actual, expected);
+});
 
-    p1 = 'rock';
-    p2 = 'paper';
-    expected = 'player 2 wins';
-    actual = rockSiscorsPaper(p1, p2);
+test('rps check for player 2 win', (expect) => {
+    const p1 = 'rock';
+    const p2 = 'paper';
+    const expected = 'player 2 wins';
+    const actual = rockSiscorsPaper(p1, p2);
     expect.equal(actual, expected);
+});
 
-    p1 = 'rock';
-    p2 = 'rock';
-    expected = 'draw';
-    actual = rockSiscorsPaper(p1, p2);
+test('rps check for draw', (expect) => {
+    const p1 = 'rock';
+    const p2 = 'rock';
+    const expected = 'draw';
+    const actual = rockSiscorsPaper(p1, p2);
     expect.equal(actual, expected);
 });
 
@@ -178,6 +198,23 @@ test('RPS check for player 1 win', (expect) => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+test('testing for full name', (expect) => {
+    const first = 'dave';
+    const last = 'fisher';
+    const middle = 'joseph';
+    const expected = 'dave joseph fisher';
+    const actual = firstLastMiddle(first, last, middle);
+    expect.equal(actual, expected);
+});
+
+test('testing for no middle name', (expect) => {
+    const first = 'dave';
+    const last = 'fisher';
+    const expected = 'dave fisher';
+    const actual = firstLastMiddle(first, last);
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
